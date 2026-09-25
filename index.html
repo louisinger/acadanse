@@ -39,13 +39,17 @@
           <img src="assets/about-stage.jpg" alt="Des danseuses sur scène pendant un spectacle.">
         </div>
 
-        <div class="home-gallery" aria-label="Galerie Aca Danse">
-          <a href="#a-propos" aria-label="Photo précédente">‹</a>
-          <img src="assets/home-gallery-1.jpg" alt="Des élèves de l'association.">
-          <img src="assets/home-gallery-2.jpg" alt="L'équipe technique d'un spectacle.">
-          <a href="#a-propos" aria-label="Photo suivante">›</a>
+        <div class="home-gallery" role="region" aria-roledescription="carrousel" aria-label="Galerie Aca Danse">
+          <button type="button" data-dir="-1" aria-label="Photos précédentes">‹</button>
+          <div class="gallery-track" tabindex="0">
+            <img src="assets/home-gallery-1.jpg" alt="Des élèves de l'association.">
+            <img src="assets/home-gallery-2.jpg" alt="L'équipe technique d'un spectacle.">
+            <img src="assets/home-gallery-3.jpg" alt="Une danseuse en plein mouvement." loading="lazy">
+            <img src="assets/home-gallery-4.jpg" alt="Des danseuses sur scène, en noir et blanc." loading="lazy">
+          </div>
+          <button type="button" data-dir="1" aria-label="Photos suivantes">›</button>
         </div>
-        <div class="home-dots" aria-label="Diapositive 1 sur 3"><span class="selected"></span><span></span><span></span></div>
+        <div class="home-dots"></div>
       </section>
 
       <section class="home-discover" aria-label="Découvrir Aca Danse">
@@ -103,5 +107,41 @@
         <a href="#contact"><span>◎</span> #acadance57</a>
       </div>
     </footer>
+
+    <script>
+      document.documentElement.classList.add('js');
+      const smooth = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+      // Carousel: native scroll-snap track; arrows and dots just scroll it.
+      const track = document.querySelector('.gallery-track');
+      const dots = document.querySelector('.home-dots');
+      const step = () => track.clientWidth + parseFloat(getComputedStyle(track).columnGap);
+      const pages = () => Math.round((track.scrollWidth - track.clientWidth) / step()) + 1;
+      const current = () => Math.min(pages() - 1, Math.round(track.scrollLeft / step()));
+      const go = (i) => track.scrollTo({ left: ((i + pages()) % pages()) * step(), behavior: smooth });
+      const buildDots = () => {
+        dots.replaceChildren(...Array.from({ length: pages() }, (_, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', `Photos ${i + 1} sur ${pages()}`);
+          b.onclick = () => go(i);
+          return b;
+        }));
+        dots.hidden = pages() < 2;
+        syncDots();
+      };
+      const syncDots = () => [...dots.children].forEach((d, i) => d.setAttribute('aria-current', i === current()));
+      document.querySelectorAll('.home-gallery [data-dir]').forEach((b) => b.onclick = () => go(current() + +b.dataset.dir));
+      track.addEventListener('scroll', syncDots, { passive: true });
+      addEventListener('resize', buildDots);
+      buildDots();
+
+      // Reveal blocks as they scroll into view.
+      const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.home-hero, .home-panel, .home-gallery, .home-image-link, .events-image-link, .home-contact, .home-footer > *')
+        .forEach((el) => { el.classList.add('reveal'); io.observe(el); });
+    </script>
   </body>
 </html>
