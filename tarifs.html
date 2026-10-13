@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nos tarifs — Aca Danse</title>
+  <meta name="description" content="Tarifs annuels des cours enfants, ados/adultes et bien-être d’Aca Danse.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,700;9..144,900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="tarifs">
+  <main id="main" class="tarifs" data-tab="enfants">
+    <div class="tarifs-bg" aria-hidden="true">
+      <img data-for="enfants" src="assets/img/tarifs-enfants.webp" alt="">
+      <img data-for="adultes" src="assets/img/tarifs-adultes.webp" alt="" loading="lazy">
+      <img data-for="bien-etre" src="assets/img/tarifs-bien-etre.webp" alt="" loading="lazy">
+    </div>
+    <div class="wrap">
+      <div class="tarifs-head">
+        <h1>Nos Tarifs</h1>
+        <div class="tabs" role="tablist" aria-label="Catégorie">
+          <button role="tab" type="button" id="t-enfants" data-tab="enfants" aria-controls="p-enfants">Enfants</button>
+          <button role="tab" type="button" id="t-adultes" data-tab="adultes" aria-controls="p-adultes">Ados/Adultes</button>
+          <button role="tab" type="button" id="t-bien-etre" data-tab="bien-etre" aria-controls="p-bien-etre">Bien-être</button>
+        </div>
+      </div>
+      <div class="prices" role="tabpanel" id="p-enfants" aria-labelledby="t-enfants">
+          <div class="col">
+            <div class="price reveal"><p class="amount">135€<small>/an</small></p><ul><li>Éveil à la Gym 3/6 ans</li><li>Classique Interm. +9 ans</li><li>Modern Jazz 11/13 ans</li><li>Classique 6/8 ans</li><li>Modern Jazz 6/8 ans</li><li>Modern Jazz 9/10 ans</li><li>Éveil à la Gym 3/6 ans G1</li><li>Éveil à la Gym 3/6 ans G2</li><li>Éveil à la Gym 3/6 ans G3</li><li>K-Dance New Styles Kids</li><li>Initiation Danse 4/6 ans</li><li>Bollywood Enfants</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">150€<small>/an</small></p><ul><li>Hip-Hop 8/12 ans</li><li>Yoga Enfants</li></ul></div>
+            <div class="price reveal"><p class="amount">160€<small>/an</small></p><ul><li>Danse Tahitienne 3/6 ans</li><li>Danse Tahitienne +6 ans</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">170€<small>/an</small></p><ul><li>Gym Enfants Début/Interm.</li><li>Gym Interm./Confirmé</li><li>Gym Enfants Déb./Interm.</li><li>Gym Enfants Conf.</li><li>Gym Enfants +10 ans</li><li>GR Déb./Interm.</li><li>GR Interm./Conf.</li></ul></div>
+          </div>
+      </div>
+      <div class="prices" role="tabpanel" id="p-adultes" aria-labelledby="t-adultes" hidden>
+          <div class="col">
+            <div class="price reveal"><p class="amount">140€<small>/an</small></p><ul><li>Jazz Funk Début./Interm.</li><li>K-Dance New Style G1</li><li>K-Dance New Style G2</li><li>K-Dance New Style G3</li></ul></div>
+            <div class="price reveal"><p class="amount">145€<small>/an</small></p><ul><li>Classique Adultes</li><li>Modern Jazz Ados +14 ans</li><li>Dance Heels</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">150€<small>/an</small></p><ul><li>Break Dance</li></ul></div>
+            <div class="price reveal"><p class="amount">160€<small>/an</small></p><ul><li>Bollywood Intermédiaire</li></ul></div>
+            <div class="price reveal"><p class="amount">175€<small>/an</small></p><ul><li>Modern Jazz Adultes</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">205€<small>/an</small></p><ul><li>Bollywood Avancés</li><li>Danse Orientale</li><li>Dance Hall / Hip-Hop</li></ul></div>
+            <div class="price reveal"><p class="amount">240€<small>/an</small></p><ul><li>Danse Tahitienne</li></ul></div>
+            <div class="price reveal"><p class="amount">255€<small>/an</small></p><ul><li>Danse Africaine</li></ul></div>
+          </div>
+      </div>
+      <div class="prices" role="tabpanel" id="p-bien-etre" aria-labelledby="t-bien-etre" hidden>
+          <div class="col">
+            <div class="price reveal"><p class="amount">140€<small>/an</small></p><ul><li>Gym Douce</li><li>Gym Adaptée</li></ul></div>
+            <div class="price reveal"><p class="amount">150€<small>/an</small></p><ul><li>Renforcement Musculaire</li><li>Cardio Dance</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">155€<small>/an</small></p><ul><li>Fitness</li><li>Pilates</li><li>Pilates Rééducatif</li><li>Qi Gong</li></ul></div>
+          </div>
+          <div class="col">
+            <div class="price reveal"><p class="amount">170€<small>/an</small></p><ul><li>Bien-être / Shiatsu</li></ul></div>
+          </div>
+      </div>
+      <p class="tarifs-note">Une question sur les inscriptions ? <a href="tel:+33663838262">Appelez-nous au 06 63 83 82 62</a></p>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
