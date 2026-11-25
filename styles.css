@@ -330,13 +330,12 @@ em { color: var(--orange); font-style: normal; }
 .where .tel { display: inline-flex; align-items: center; gap: .5rem; font: 500 clamp(1.4rem, 2.4vw, 2rem)/1 var(--sans); text-decoration: none; }
 .where .tel svg { width: 1.2em; height: 1.2em; }
 .where .tel:hover { color: var(--orange); }
-.about-gallery { margin-top: 3rem; }
-.about-gallery .track, .photo-gallery .track { grid-auto-columns: 82%; }
-.about-gallery img, .photo-gallery img { width: 100%; aspect-ratio: 300 / 288; object-fit: cover; border-radius: 16px; }
+.photo-gallery .track { grid-auto-columns: 82%; }
+.photo-gallery img { width: 100%; aspect-ratio: 300 / 288; object-fit: cover; border-radius: 16px; }
 @media (min-width: 860px) {
   .about { min-height: calc(100svh - var(--hh)); padding-left: 60px; }
   .about-grid { grid-template-columns: 1.4fr 1fr; gap: 4rem; }
-  .about-gallery .track, .photo-gallery .track { grid-auto-columns: calc((100% - 2 * 3.5rem) / 3); gap: 3.5rem; }
+  .photo-gallery .track { grid-auto-columns: calc((100% - 2 * 3.5rem) / 3); gap: 3.5rem; }
 }
 @media (min-width: 900px) {
   html:has(body[data-page="home"]) { scroll-snap-type: y proximity; }
@@ -622,14 +621,15 @@ a.session:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgb(100 6
   min-width: 0;
   overflow: hidden;
 }
-.scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / .6), rgb(0 0 0 / .1) 60%); }
-.scene-text { position: absolute; z-index: 1; top: clamp(1.5rem, 6vw, 4rem); left: clamp(1rem, 6vw, 5rem); right: 1rem; max-width: 34rem; }
+.scene img, .scene video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #000; }
+.scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(0 0 0 / .6), rgb(0 0 0 / .1) 60%); pointer-events: none; }
+.scene-text { pointer-events: none; position: absolute; z-index: 1; top: clamp(1.5rem, 6vw, 4rem); left: clamp(1rem, 6vw, 5rem); right: 1rem; max-width: 34rem; }
 .scene h2 { font: 400 clamp(2rem, 4.5vw, 3.4rem)/1.1 var(--serif); }
 .scene-intro h2 { font: 700 clamp(2.4rem, 5vw, 3.6rem)/1.05 var(--serif); }
 .scene-intro h2 strong { display: block; font: 700 clamp(2.8rem, 6vw, 4.4rem)/1 var(--display); }
 .scene-intro p { margin-top: 1rem; font: 400 clamp(1rem, 1.5vw, 1.25rem)/1.45 var(--serif); }
-.show-cta { position: absolute; z-index: 2; right: clamp(1rem, 4vw, 3rem); bottom: 4.5rem; }
+/* Au-dessus de la barre de lecture des vidéos. */
+.show-cta { position: absolute; z-index: 2; right: clamp(1rem, 4vw, 3rem); bottom: 7.5rem; }
 .show-cta .btn { font-size: clamp(1rem, 1.6vw, 1.35rem); padding: .35em 1em; background: rgb(0 0 0 / .35); }
 .show .dots { color: #fff; }
 .show .arrow[data-dir="-1"] { left: 16px; }

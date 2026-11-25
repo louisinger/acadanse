@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gala 2026 — Aca Danse</title>
-  <meta name="description" content="Le gala 2026 d’Aca Danse en images : danse classique, tahitienne, modern jazz, hip-hop, Bollywood, heels, danse africaine…">
+  <meta name="description" content="Le gala 2026 d’Aca Danse en vidéo : danse classique, tahitienne, modern jazz, hip-hop, Bollywood, heels, danse africaine…">
   <meta name="theme-color" content="#000000">
   <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,700;9..144,900&display=swap">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script src="app.js?v=3"></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="app.js?v=4"></script>
 </head>
 <body data-page="gala">
   <main id="main" class="gala-page">
@@ -19,50 +19,58 @@
       <a class="back" href="galas.html">← Tous les galas</a>
       <h1 class="visually-hidden">Gala 2026</h1>
     </div>
-    <section class="carousel show" aria-label="Photos du gala 2026">
-      <button class="arrow" type="button" data-dir="-1" aria-label="Photo précédente">‹</button>
+    <!-- ponytail: une vidéo par diapositive ; seule celle affichée est chargée et lue (sans le son, comme un fond animé). -->
+    <section class="carousel show" aria-label="Vidéos du gala 2026">
+      <button class="arrow" type="button" data-dir="-1" aria-label="Vidéo précédente">‹</button>
       <div class="track">
         <figure class="scene scene-intro">
-          <img src="assets/img/gala-2026-intro.jpg" alt="Une danseuse seule sur scène, en robe noire.">
+          <video src="assets/video/gala-2026-01.mp4" poster="assets/video/gala-2026-01.jpg" preload="none" controls muted playsinline loop aria-label="Gala 2026, ouverture"></video>
           <figcaption class="scene-text">
             <h2>Gala <strong>2026</strong></h2>
             <p>Venez célébrer la danse et le talent de nos élèves lors de notre grand gala annuel ! Une soirée placée sous le signe du partage, de l’émotion et de la passion, avec des chorégraphies variées et des performances préparées tout au long de l’année. Un spectacle à ne pas manquer !</p>
           </figcaption>
         </figure>
+        <figure class="scene scene-intro">
+          <video src="assets/video/gala-2026-02.mp4" poster="assets/video/gala-2026-02.jpg" preload="none" controls muted playsinline loop aria-label="Gala 2026, ouverture (suite)"></video>
+          <figcaption class="scene-text" aria-hidden="true">
+            <h2>Gala <strong>2026</strong></h2>
+            <p>Venez célébrer la danse et le talent de nos élèves lors de notre grand gala annuel ! Une soirée placée sous le signe du partage, de l’émotion et de la passion, avec des chorégraphies variées et des performances préparées tout au long de l’année. Un spectacle à ne pas manquer !</p>
+          </figcaption>
+        </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-classique.jpg" alt="Les danseuses de classique sur scène, en robes noires." loading="lazy">
+          <video src="assets/video/gala-2026-03.mp4" poster="assets/video/gala-2026-03.jpg" preload="none" controls muted playsinline loop aria-label="Danse Classique"></video>
           <figcaption class="scene-text"><h2>Danse Classique</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-tahitienne.jpg" alt="Les danseuses de tahitienne en jupes rouges et couronnes de fleurs." loading="lazy">
+          <video src="assets/video/gala-2026-04.mp4" poster="assets/video/gala-2026-04.jpg" preload="none" controls muted playsinline loop aria-label="Danse Tahitienne"></video>
           <figcaption class="scene-text"><h2>Danse Tahitienne</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-modern-jazz.jpg" alt="Le groupe de modern jazz sur scène." loading="lazy">
+          <video src="assets/video/gala-2026-05.mp4" poster="assets/video/gala-2026-05.jpg" preload="none" controls muted playsinline loop aria-label="Modern Jazz"></video>
           <figcaption class="scene-text"><h2>Modern Jazz</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-hip-hop.jpg" alt="Un jeune danseur de hip-hop au centre de la scène." loading="lazy">
+          <video src="assets/video/gala-2026-06.mp4" poster="assets/video/gala-2026-06.jpg" preload="none" controls muted playsinline loop aria-label="Dance Hall / Hip-Hop"></video>
           <figcaption class="scene-text"><h2>Dance Hall / Hip-Hop</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-bollywood.jpg" alt="Les danseuses de Bollywood en tenues colorées." loading="lazy">
+          <video src="assets/video/gala-2026-07.mp4" poster="assets/video/gala-2026-07.jpg" preload="none" controls muted playsinline loop aria-label="Bollywood"></video>
           <figcaption class="scene-text"><h2>Bollywood</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-heels.jpg" alt="Les danseuses de heels dance entre les rideaux." loading="lazy">
+          <video src="assets/video/gala-2026-08.mp4" poster="assets/video/gala-2026-08.jpg" preload="none" controls muted playsinline loop aria-label="Heels Dance"></video>
           <figcaption class="scene-text"><h2>Heels Dance</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-africaine.jpg" alt="Les danseuses de danse africaine devant les percussionnistes." loading="lazy">
+          <video src="assets/video/gala-2026-09.mp4" poster="assets/video/gala-2026-09.jpg" preload="none" controls muted playsinline loop aria-label="Danse Africaine"></video>
           <figcaption class="scene-text"><h2>Danse Africaine</h2></figcaption>
         </figure>
         <figure class="scene">
-          <img src="assets/img/gala-2026-saxophone.jpg" alt="Un saxophoniste joue seul sur scène." loading="lazy">
+          <video src="assets/video/gala-2026-10.mp4" poster="assets/video/gala-2026-10.jpg" preload="none" controls muted playsinline loop aria-label="Un saxophoniste seul sur scène"></video>
         </figure>
       </div>
       <p class="show-cta"><a class="btn" href="gala-2026-telechargement.html">Voir toute la version du Gala →</a></p>
-      <button class="arrow" type="button" data-dir="1" aria-label="Photo suivante">›</button>
+      <button class="arrow" type="button" data-dir="1" aria-label="Vidéo suivante">›</button>
       <div class="dots"></div>
     </section>
   </main>

@@ -12,6 +12,7 @@ const PROFS = {
   'Serge et Rania': 'prof-serge-et-rania',
   'Olivia': 'prof-olivia',
   'Joël': 'prof-joel',
+  'Anna': 'prof-anna',
 };
 
 // name : intitulé des listes — title : titre de la fiche s’il diffère.
@@ -52,7 +53,7 @@ const COURSES = [
     ] },
   { slug: 'bollywood', name: 'Bollywood', short: 'Bollywood', kind: 'danse', pos: 22,
     tag: 'Rythme, expression, évasion !',
-    intro: 'Envie de voyager au rythme de musiques entraînantes et colorées ? La <strong>danse Bollywood</strong> vous invite à mêler énergie, expression et plaisir de danser à travers des chorégraphies inspirées du cinéma indien, dans une ambiance festive et pleine de bonne humeur !',
+    intro: 'Tout droit venue de l’univers coloré du cinéma indien, la <strong>danse Bollywood</strong> est un véritable mélange de styles, d’émotions et d’énergie ! Inspirée des danses traditionnelles indiennes, elle se mélange à des influences plus modernes comme le hip-hop, le jazz, les danses orientales ou encore le Girly.',
     cards: [
       ['Bougez en rythme', 'Découvrez des chorégraphies entraînantes mêlant mouvements dynamiques, gestes traditionnels et rythmes indiens.'],
       ['Exprimez vos émotions', 'Laissez parler votre corps et votre personnalité à travers des gestes expressifs et une danse pleine de caractère.'],
@@ -66,11 +67,11 @@ const COURSES = [
     ] },
   { slug: 'tahitienne', name: 'Danse Tahitienne', short: 'Tahitienne', kind: 'danse', pos: 26,
     tag: 'Rythme, grâce, évasion !',
-    intro: 'Envie de découvrir les rythmes envoûtants des îles du Pacifique ? La <strong>danse tahitienne</strong> vous invite à allier énergie, grâce et expression corporelle à travers des mouvements rythmés et traditionnels, dans une ambiance chaleureuse et dépaysante !',
+    intro: 'Le <strong>Ori Tahiti</strong>, la danse tahitienne, est un art vibrant et riche qui incarne l’essence même de la culture polynésienne. Bien plus qu’une simple série de mouvements, le Ori Tahiti est une véritable célébration de l’histoire, des traditions et des émotions des îles de la Polynésie française.',
     cards: [
-      ['Bougez au rythme des îles', 'Travaillez les mouvements du bassin et développez votre coordination au son des musiques tahitiennes.'],
-      ['Tonifiez votre corps', 'Renforcez votre sangle abdominale, améliorez votre endurance et développez votre souplesse grâce à des mouvements rythmés.'],
-      ['Exprimez votre culture', 'Découvrez une danse riche en traditions, laissez-vous porter par la musique et exprimez vos émotions à travers vos mouvements.'],
+      ['Une immersion culturelle', 'À travers des chansons et des histoires, ils découvriront les traditions et les valeurs de la danse tahitienne.'],
+      ['Un moment de partage', 'Les cours se dérouleront dans une ambiance chaleureuse et conviviale, favorisant l’échange.'],
+      ['Des mouvements adaptés', 'Découvrez une danse riche en traditions, laissez-vous porter par la musique et exprimez vos émotions à travers vos mouvements.'],
     ],
     note: 'Au programme : échauffement, apprentissage des mouvements traditionnels tahitiens et découverte de chorégraphies au rythme des musiques des îles, dans une ambiance conviviale et chaleureuse.',
     sessions: [
@@ -79,8 +80,8 @@ const COURSES = [
       ['Danse Tahitienne', 'Mercredi', '20h00 – 21h30', 'Julie'],
     ] },
   { slug: 'africaine', name: 'Danse Africaine', short: 'Africaine', kind: 'danse', pos: 44,
-    tag: 'Énergie, rythme, expression !',
-    intro: 'Envie de libérer votre énergie au rythme des percussions africaines ? La <strong>danse africaine</strong> vous invite à allier dynamisme, expression et convivialité à travers des mouvements puissants et rythmés, dans une ambiance chaleureuse et pleine de bonne humeur !',
+    tag: 'Vibrez, bougez, lâchez prise !',
+    intro: 'Laissez-vous emporter par l’énergie des rythmes africains ! Entre traditions et modernité, nos cours de <strong>danse africaine</strong> vous invitent à explorer une danse vivante, expressive et pleine de caractère. Une activité sportive qui allie plaisir, énergie et convivialité, où chacun peut s’exprimer librement, se dépenser et surtout lâcher prise.',
     cards: [
       ['Libérez votre énergie', 'Laissez-vous porter par les rythmes des percussions et enchaînez des mouvements dynamiques et entraînants.'],
       ['Tonifiez votre corps', 'Développez votre endurance, renforcez vos muscles et améliorez votre coordination grâce à une danse complète.'],
@@ -193,7 +194,6 @@ const COURSES = [
       ['Éveil à la gym G4', 'Lundi', '16h00 – 17h00', 'Olivia'],
     ] },
   { slug: 'gym', name: 'Gym', title: 'Gymnastique', short: 'Gym', kind: 'activite', pos: 57,
-    gallery: ['gym-1', 'gym-2', 'gym-3'],
     tag: 'Force, souplesse, équilibre !',
     intro: 'Envie de développer vos capacités physiques tout en relevant de nouveaux défis ? La <strong>Gymnastique</strong> est une discipline complète qui associe force, souplesse, équilibre et coordination. À travers des exercices variés et des mouvements techniques, développez votre maîtrise corporelle et progressez à votre rythme !',
     cards: [
@@ -203,10 +203,6 @@ const COURSES = [
     ],
     note: 'Au programme : échauffement, exercices de renforcement et de souplesse, apprentissage de figures gymniques et parcours techniques adaptés au niveau de chacun.',
     sessions: [
-      ['Gym douce G1', 'Lundi', '10h00 – 11h00', 'Edith'],
-      ['Gym Adaptée G1', 'Mardi', '9h00 – 10h00', 'Anna'],
-      ['Gym Adaptée G2', 'Mardi', '10h00 – 11h00', 'Anna'],
-      ['Gym douce G2', 'Jeudi', '10h00 – 11h00', 'Edith'],
       ['Gym enfants confirmés', 'Jeudi', '17h00 – 19h15', 'Olivia'],
       ['Gym enfants +10 ans', 'Jeudi', '19h15 – 20h45', 'Olivia'],
     ] },
@@ -288,7 +284,7 @@ const COURSES = [
     ],
     note: 'Au programme : découverte des principes du Shiatsu, apprentissage des techniques de pression et travail sur différentes zones du corps dans une atmosphère calme et propice à la détente.',
     sessions: [['Shiatsu', 'Jeudi', '9h00 – 10h00', 'Joël']] },
-  { slug: 'yoga', name: 'Yoga', title: 'Yoga Vinyasa', short: 'Yoga', kind: 'activite', pos: 50,
+  { slug: 'yoga', name: 'Yoga Adultes', short: 'Yoga Adultes', kind: 'activite', pos: 50,
     tag: 'Respirez, étirez, apaisez !',
     intro: 'Le Yoga Vinyasa est un style de yoga moderne, dynamique et fluide où chaque mouvement est étroitement synchronisé avec la respiration. Le Vinyasa est plus physique et intense que le Hatha yoga traditionnel.',
     cards: [
@@ -297,10 +293,7 @@ const COURSES = [
       ['Apaisez votre esprit', 'Synchronisez vos mouvements avec votre respiration pour évacuer le stress et retrouver un véritable moment de bien-être.'],
     ],
     note: 'Il s’adapte à tous les niveaux (du débutant au pratiquant avancé) grâce aux variations proposées dans nos cours.',
-    sessions: [
-      ['Yoga Enfants', 'Mardi', '17h30 – 18h30', 'Christelle'],
-      ['Yoga Adultes', 'Jeudi', '19h00 – 20h00', 'Anne-Sophie'],
-    ] },
+    sessions: [['Yoga Adultes', 'Jeudi', '19h00 – 20h00', 'Anne-Sophie']] },
   { slug: 'cardio-dance', name: 'Cardio Dance', title: 'Cardio Danse', short: 'Cardio Dance', kind: 'activite', pos: 12,
     tag: 'Bougez, transpirez, souriez !',
     intro: 'Envie de vous dépenser sans voir le temps passer ? Le <strong>Cardio Danse</strong> est le cours idéal pour allier plaisir, musique entraînante et dépense énergétique maximale, le tout dans une ambiance festive et accessible à tous !',
@@ -311,4 +304,41 @@ const COURSES = [
     ],
     note: 'Pas besoin d’être un(e) danseur(se) confirmé(e) : venez juste avec votre bonne humeur et votre bouteille d’eau !',
     sessions: [['Cardio Dance', 'Mardi', '19h30 – 20h30', 'Rania']] },
+  { slug: 'yoga-enfants', name: 'Yoga Enfants', short: 'Yoga Enfants', kind: 'activite', pos: 50,
+    tag: 'Équilibre, concentration, sérénité !',
+    intro: 'Envie d’offrir à votre enfant un moment de calme et de découverte ? Le <strong>Yoga Enfants</strong> propose une approche ludique du yoga à travers des postures adaptées, des exercices de respiration et des petits jeux. Une activité idéale pour apprendre à mieux connaître son corps, développer sa concentration et cultiver la sérénité tout en s’amusant !',
+    cards: [
+      ['Bougez en douceur', 'Découvrez des postures amusantes et développez votre souplesse, votre équilibre et votre coordination.'],
+      ['Apprenez à vous concentrer', 'Explorez votre respiration et développez votre attention à travers des exercices simples et adaptés.'],
+      ['Cultivez votre sérénité', 'Apprenez à reconnaître vos émotions, à vous détendre et à retrouver le calme grâce à des moments de relaxation.'],
+    ],
+    note: 'Au programme : postures de yoga adaptées aux enfants, jeux autour de la respiration, exercices d’équilibre et petits moments de relaxation dans une ambiance ludique et bienveillante.',
+    sessions: [['Yoga Enfants', 'Mardi', '17h30 – 18h30', 'Christelle']] },
+  // ponytail: la maquette reprend pour Gym Adaptée et Gym Douce les photos des cartes Yoga Adultes et Cardio Dance.
+  { slug: 'gym-adaptee', name: 'Gym Adaptée', short: 'Gym Adaptée', kind: 'activite', pos: 50, img: 'card-yoga',
+    tag: 'Mobilité, autonomie, bien-être !',
+    intro: 'Envie de prendre soin de votre corps et de préserver votre mobilité ? La <strong>Gym Adaptée</strong> propose des exercices physiques adaptés aux capacités et aux besoins de chacun. Une activité idéale pour entretenir sa forme, améliorer son équilibre et conserver son autonomie tout en partageant un moment convivial !',
+    cards: [
+      ['Entretenez votre mobilité', 'Travaillez votre souplesse et votre amplitude de mouvement pour conserver votre aisance dans les gestes du quotidien.'],
+      ['Préservez votre autonomie', 'Développez votre équilibre, votre coordination et votre force grâce à des exercices progressifs et adaptés.'],
+      ['Bougez à votre rythme', 'Profitez d’une activité accessible et bienveillante, où chacun avance selon ses capacités et ses envies.'],
+    ],
+    note: 'Au programme : exercices de mobilité articulaire, travail de l’équilibre, renforcement musculaire doux et mouvements adaptés aux capacités de chacun dans une ambiance conviviale et bienveillante.',
+    sessions: [
+      ['Gym Adaptée G1', 'Mardi', '9h00 – 10h00', 'Anna'],
+      ['Gym Adaptée G2', 'Mardi', '10h00 – 11h00', 'Anna'],
+    ] },
+  { slug: 'gym-douce', name: 'Gym Douce', short: 'Gym Douce', kind: 'activite', pos: 12, img: 'card-cardio-dance',
+    tag: 'Souplesse, mobilité, détente !',
+    intro: 'Envie de bouger en douceur et de prendre soin de vous ? La <strong>Gym Douce</strong> propose des exercices accessibles qui associent mouvements fluides, étirements et renforcement léger. Une activité idéale pour entretenir sa souplesse, préserver sa mobilité et se sentir bien dans son corps, sans brusquer ses capacités !',
+    cards: [
+      ['Entretenez votre souplesse', 'Réalisez des mouvements doux et des étirements pour conserver votre mobilité et gagner en aisance.'],
+      ['Déliez votre corps', 'Mobilisez vos articulations et renforcez vos muscles en douceur pour améliorer votre confort au quotidien.'],
+      ['Prenez un moment pour vous', 'Écoutez votre corps, relâchez les tensions et profitez d’une activité qui allie mouvement et détente.'],
+    ],
+    note: 'Au programme : mobilisation articulaire, étirements doux, exercices de respiration et renforcement léger dans une ambiance calme et conviviale.',
+    sessions: [
+      ['Gym douce G1', 'Lundi', '10h00 – 11h00', 'Edith'],
+      ['Gym douce G2', 'Jeudi', '10h00 – 11h00', 'Edith'],
+    ] },
 ];

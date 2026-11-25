@@ -159,8 +159,6 @@ const PAGES = {
       dots.classList.toggle('on-light', e.target.classList.contains('light'));
     }), { threshold: 0.5 });
     sections.forEach(s => io.observe(s));
-
-    carousel(document.querySelector('.about-gallery'));
   },
 
   list() {
@@ -286,7 +284,17 @@ const PAGES = {
 
   gala() {
     const show = document.querySelector('.show');
-    if (show) carousel(show);
+    if (!show) return;
+    carousel(show);
+    // The video on screen plays (muted, like an animated background: its controls turn the
+    // sound on); the others pause. preload="none" keeps the hidden ones from downloading.
+    const videos = show.querySelectorAll('video');
+    if (!videos.length) return;
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { if (!reduced) e.target.play().catch(() => {}); }
+      else e.target.pause();
+    }), { root: show.querySelector('.track'), threshold: 0.6 });
+    videos.forEach(v => io.observe(v));
   },
 };
 
